@@ -31,9 +31,9 @@ class LinearRegression:
             inter = self.inter - gamma * igrad
             if self.loss(slope,inter) < self.loss():
                 self.slope = slope
-                print('slope', slope)
+                #print('slope', slope)
                 self.inter = inter
-                print('inter',inter)
+                #print('inter',inter)
             else:
                 gamma /= 2
 
@@ -51,9 +51,10 @@ def main():
     loss_ys = np.array([lr.loss(a) for a in loss_xs])
     plt.plot(loss_xs, loss_ys)
     lr.fit()
-    plt.show()
     print("slope", lr.slope)
     print("intercept", lr.inter)
+    plt.show()
+    #plt.plot(loss_xs,[lr.slope * i + lr.inter for i in loss_xs])
     print('done')
 
 
