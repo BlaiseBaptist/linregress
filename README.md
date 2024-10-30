@@ -1,4 +1,4 @@
 # Linear Regression
 ## Function
 Performs a linear regression using a loss funtion to get the error at each step. 
-It get closer to the real value quickly but then slows down by taking smaller steps to not overshoot the right function
+It get close to the real value quickly by taking big steps at first but then reducing its step size once it is close to the right function
